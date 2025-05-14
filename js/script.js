@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const vistaCartaSeleccionada = document.querySelector('.carta-seleccionada-vista');
     const cartaAmpliada = document.querySelector('.carta-ampliada');
     const cartaReversoVista = document.querySelector('.carta-reverso-vista');
-    // ELIMINAMOS ESTA LÍNEA: const cerrarVistaCartaBtn = document.getElementById('cerrar-vista-carta');
     const categoryButtons = document.querySelectorAll('.category-btn');
+    const bodyElement = document.body; // Seleccionamos el elemento body
 
     // **Datos de las cartas (simulado desde un JSON)**
     const cartasData = {
@@ -82,6 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     vistaCartaSeleccionada.style.display = 'none';
                     marvelSection.classList.remove('carta-seleccionada');
                 }
+                bodyElement.style.backgroundImage = "url('../img/Fondo.jpg')";
+                bodyElement.style.backgroundSize = 'cover';
+                bodyElement.style.backgroundRepeat = 'no-repeat';
+                bodyElement.style.backgroundPosition = 'center';
             });
         }
     }
@@ -94,7 +98,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 const cartaId = cartaElement.dataset.id;
                 const cartaInfo = cartasData[cartaId];
 
-                if (cartaInfo) {
+                if (cartaInfo && vistaCartaSeleccionada) {
+                    // Añadir clase basada en la categoría
+                    vistaCartaSeleccionada.className = 'carta-seleccionada-vista'; // Resetear clases anteriores
+                    if (cartaInfo.categoria === 'avengers') {
+                        vistaCartaSeleccionada.classList.add('avengers-card');
+                    } else if (cartaInfo.categoria === 'xmen') {
+                        vistaCartaSeleccionada.classList.add('xmen-card');
+                    } // Añade más condiciones si tienes estilos específicos para otras categorías
+
                     cartaAmpliada.innerHTML = `
                         <img src="${cartaInfo.imagenFront}" alt="${cartaInfo.nombre}">
                         <div class="info-principal">
@@ -128,18 +140,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // **ELIMINAMOS ESTE BLOQUE DE CÓDIGO:**
-    /*
-    if (cerrarVistaCartaBtn && vistaCartaSeleccionada && marvelSection) {
-        cerrarVistaCartaBtn.addEventListener('click', () => {
-            vistaCartaSeleccionada.style.display = 'none';
-            marvelSection.classList.remove('carta-seleccionada');
-        });
-    }
-    */
-
-    // **Funcionalidad para filtrar las cartas de Marvel por categoría**
-    if (categoryButtons && cartasMarvelLista) {
+    // **Funcionalidad para filtrar las cartas de Marvel por categoría y cambiar el fondo**
+    if (categoryButtons && cartasMarvelLista && bodyElement) {
         categoryButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const category = button.dataset.category;
@@ -157,6 +159,29 @@ document.addEventListener('DOMContentLoaded', () => {
                         card.style.display = 'none';
                     }
                 });
+
+                // Cambiar el fondo según la categoría seleccionada
+                if (category === 'avengers') {
+                    bodyElement.style.backgroundImage = "url('../img/AvengersFondo.jpg')";
+                    bodyElement.style.backgroundSize = 'cover';
+                    bodyElement.style.backgroundRepeat = 'no-repeat';
+                    bodyElement.style.backgroundPosition = 'center';
+                } else if (category === 'xmen') {
+                    bodyElement.style.backgroundImage = "url('../img/XMENFondo.jpg')";
+                    bodyElement.style.backgroundSize = 'cover';
+                    bodyElement.style.backgroundRepeat = 'no-repeat';
+                    bodyElement.style.backgroundPosition = 'center';
+                } else if (category === 'guardians') {
+                    bodyElement.style.backgroundImage = "url('../img/Fondo.jpg')"; // Puedes poner un fondo específico si lo tienes
+                    bodyElement.style.backgroundSize = 'cover';
+                    bodyElement.style.backgroundRepeat = 'no-repeat';
+                    bodyElement.style.backgroundPosition = 'center';
+                } else {
+                    bodyElement.style.backgroundImage = "url('../img/Fondo.jpg')";
+                    bodyElement.style.backgroundSize = 'cover';
+                    bodyElement.style.backgroundRepeat = 'no-repeat';
+                    bodyElement.style.backgroundPosition = 'center';
+                }
             });
         });
 
