@@ -165,22 +165,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     bodyElement.style.backgroundImage = "url('../img/AvengersFondo.jpg')";
                     bodyElement.style.backgroundSize = 'cover';
                     bodyElement.style.backgroundRepeat = 'no-repeat';
-                    bodyElement.style.backgroundPosition = 'center';
+                    bodyElement.style.backgroundPosition = 'cover';
                 } else if (category === 'xmen') {
                     bodyElement.style.backgroundImage = "url('../img/XMENFondo.jpg')";
                     bodyElement.style.backgroundSize = 'cover';
                     bodyElement.style.backgroundRepeat = 'no-repeat';
-                    bodyElement.style.backgroundPosition = 'center';
+                    bodyElement.style.backgroundPosition = 'cover';
                 } else if (category === 'guardians') {
                     bodyElement.style.backgroundImage = "url('../img/Fondo.jpg')"; // Puedes poner un fondo específico si lo tienes
                     bodyElement.style.backgroundSize = 'cover';
                     bodyElement.style.backgroundRepeat = 'no-repeat';
-                    bodyElement.style.backgroundPosition = 'center';
+                    bodyElement.style.backgroundPosition = 'cover';
                 } else {
                     bodyElement.style.backgroundImage = "url('../img/Fondo.jpg')";
                     bodyElement.style.backgroundSize = 'cover';
                     bodyElement.style.backgroundRepeat = 'no-repeat';
-                    bodyElement.style.backgroundPosition = 'center';
+                    bodyElement.style.backgroundPosition = 'cover';
                 }
             });
         });
