@@ -7,12 +7,34 @@ body {
     color: white; /* Texto blanco para que contraste con el fondo */
 }
 
+.marvel-container {
+    display: none; /* Oculto por defecto */
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: white;
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de fondo */
+}
+
 header {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el menú */
+    background-color: #000000; /* Fondo negro sólido para el menú */
     padding: 1em 0;
     position: sticky; /* Mantiene el menú fijo en la parte superior al hacer scroll */
     top: 0;
     z-index: 100; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+.bienvenida {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para la bienvenida */
+    padding: 31px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Una sombra suave */
+}
+.bienvenida {
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para la bienvenida, menos opaco */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Una sombra suave */
 }
 
 .menu {

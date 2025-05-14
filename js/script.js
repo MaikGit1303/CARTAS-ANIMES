@@ -167,12 +167,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     bodyElement.style.backgroundRepeat = 'no-repeat';
                     bodyElement.style.backgroundPosition = 'cover';
                 } else if (category === 'xmen') {
-                    bodyElement.style.backgroundImage = "url('../img/XMENFondo.jpg')";
+                    bodyElement.style.backgroundImage = "url('../img/XMENFondo.webp')";
                     bodyElement.style.backgroundSize = 'cover';
                     bodyElement.style.backgroundRepeat = 'no-repeat';
                     bodyElement.style.backgroundPosition = 'cover';
                 } else if (category === 'guardians') {
-                    bodyElement.style.backgroundImage = "url('../img/Fondo.jpg')"; // Puedes poner un fondo específico si lo tienes
+                    bodyElement.style.backgroundImage = "url('../img/GuardiansFondo.jpg')"; // Puedes poner un fondo específico si lo tienes
                     bodyElement.style.backgroundSize = 'cover';
                     bodyElement.style.backgroundRepeat = 'no-repeat';
                     bodyElement.style.backgroundPosition = 'cover';
