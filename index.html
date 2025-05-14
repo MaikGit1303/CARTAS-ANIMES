@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Cartas Anime</title>
-    <link rel="stylesheet" href="css/style.css"> </head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
     <header>
         <nav class="menu">
@@ -15,10 +16,10 @@
             <ul class="botones-menu">
                 <li><button class="boton-interactivo">Home</button></li>
                 <li><button class="boton-interactivo">DC</button></li>
-                <li><button class="boton-interactivo">Marvel</button></li>
+                <li><button class="boton-interactivo" id="marvel-btn">Marvel</button></li>
                 <li><button class="boton-interactivo">Arena</button></li>
                 <li><button class="boton-interactivo">Ajustes</button></li>
-                </ul>
+            </ul>
         </nav>
     </header>
 
@@ -26,8 +27,67 @@
         <div class="bienvenida">
             <h1>¡Irasshaimase, valiente viajero!</h1>
             <p>En este vasto universo de cartas anime, donde cada ilustración encierra un poder inimaginable y cada personaje forja su propio destino, te damos la más cordial bienvenida. Prepárate para embarcarte en una aventura sin igual, desvelando los secretos ocultos en cada carta y dominando habilidades legendarias. ¡El destino de incontables mundos está en tus manos! ¿Serás capaz de alzarte como el héroe definitivo?</p>
-            </div>
+        </div>
     </main>
 
-    <script src="js/script.js"></script> </body>
+    <div class="marvel-container" style="display: none;">
+        <h2>Cartas de Marvel</h2>
+        <div class="marvel-categories">
+            <button class="category-btn active" data-category="all">Todos</button>
+            <button class="category-btn" data-category="avengers">Avengers</button>
+            <button class="category-btn" data-category="xmen">X-Men</button>
+            <button class="category-btn" data-category="guardians">Guardianes de la Galaxia</button>
+        </div>
+        <div class="lista-cartas-marvel">
+            <div class="carta-marvel" data-id="spiderman">
+                <div class="cara principal">
+                    <img src="img/marvel/spiderman_front.jpg" alt="Spiderman">
+                    <div class="info-principal">
+                        <h3>Spiderman</h3>
+                        <p class="clave">SM-001</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carta-marvel" data-id="ironman">
+                <div class="cara principal">
+                    <img src="img/marvel/ironman_front.jpg" alt="Iron Man">
+                    <div class="info-principal">
+                        <h3>Iron Man</h3>
+                        <p class="clave">IM-002</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carta-marvel" data-id="wolverine">
+                <div class="cara principal">
+                    <img src="img/marvel/wolverine_front.jpg" alt="Wolverine">
+                    <div class="info-principal">
+                        <h3>Wolverine</h3>
+                        <p class="clave">WL-003</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carta-marvel" data-id="starlord">
+                <div class="cara principal">
+                    <img src="img/marvel/starlord_front.jpg" alt="Star-Lord">
+                    <div class="info-principal">
+                        <h3>Star-Lord</h3>
+                        <p class="clave">SL-004</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carta-seleccionada-vista" style="display: none;">
+            <div class="carta-ampliada">
+                </div>
+            <div class="carta-reverso-vista">
+                </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
 </html>
