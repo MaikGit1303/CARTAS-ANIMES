@@ -63,8 +63,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     fotoPerfil.src = e.target.result;
                 };
                 reader.readAsDataURL(file);
-            }
-        });
+    }
+});
+
+// Nueva funcionalidad para voltear la carta al hacer clic en ella
+document.querySelectorAll('.carta-marvel').forEach(carta => {
+    carta.addEventListener('click', (event) => {
+        // Evitar que el clic en la carta ampliada abra la vista ampliada
+        if (event.target.closest('.carta-seleccionada-vista')) {
+            return;
+        }
+        const inner = carta.querySelector('.carta-inner');
+        if (inner) {
+            inner.classList.toggle('flipped');
+        }
+    });
+});
     }
 
     // **Funcionalidad para mostrar/ocultar secciones del menú**
@@ -95,6 +109,11 @@ document.addEventListener('DOMContentLoaded', () => {
         cartasMarvelLista.addEventListener('click', (event) => {
             const cartaElement = event.target.closest('.carta-marvel');
             if (cartaElement) {
+                // Si la carta ya está volteada, no hacer nada para evitar conflicto con la vista ampliada
+                if (cartaElement.querySelector('.carta-inner').classList.contains('flipped')) {
+                    return;
+                }
+
                 const cartaId = cartaElement.dataset.id;
                 const cartaInfo = cartasData[cartaId];
 
@@ -155,6 +174,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     const cartaInfo = cartasData[cartaId];
                     if (category === 'all' || (cartaInfo && cartaInfo.categoria === category)) {
                         card.style.display = 'block';
+                        // Remover clase flipped al mostrar la carta para evitar que quede volteada
+                        card.querySelector('.carta-inner').classList.remove('flipped');
                     } else {
                         card.style.display = 'none';
                     }
