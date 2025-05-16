@@ -45,6 +45,126 @@ document.addEventListener('DOMContentLoaded', () => {
             habilidades: ['Excelente tirador', 'Liderazgo estratégico', 'Equipo avanzado'],
             descripcion: 'El legendario forajido líder de los Guardianes.',
             categoria: 'guardians'
+        },
+        thor: {
+            nombre: 'Thor',
+            clave: 'TH-005',
+            imagenFront: 'img/placeholder.png',
+            habilidades: ['Dios del trueno', 'Fuerza sobrehumana', 'Control del rayo'],
+            descripcion: 'El dios del trueno, con fuerza y control del rayo.',
+            categoria: 'avengers'
+        },
+        hulk: {
+            nombre: 'Hulk',
+            clave: 'HK-006',
+            imagenFront: 'img/placeholder.png',
+            habilidades: ['Fuerza descomunal', 'Resistencia casi invencible', 'Regeneración rápida'],
+            descripcion: 'Fuerza descomunal y resistencia casi invencible.',
+            categoria: 'avengers'
+        },
+        avispa: {
+            nombre: 'Avispa',
+            clave: 'AV-007',
+            imagenFront: 'img/placeholder.png',
+            habilidades: ['Reducir tamaño', 'Vuelo', 'Disparo de energía'],
+            descripcion: 'Pequeña pero poderosa, con la habilidad de reducir su tamaño.',
+            categoria: 'avengers'
+        },
+        hombreHormiga: {
+            nombre: 'Hombre Hormiga',
+            clave: 'HH-008',
+            imagenFront: 'img/placeholder.png',
+            habilidades: ['Cambio de tamaño', 'Experto en tecnología', 'Fuerza aumentada'],
+            descripcion: 'Experto en tecnología y capaz de cambiar de tamaño.',
+            categoria: 'avengers'
+        },
+        capitanAmerica: {
+            nombre: 'Capitán América',
+            clave: 'CA-009',
+            imagenFront: 'img/placeholder.png',
+            habilidades: ['Soldado superhumano', 'Escudo indestructible', 'Liderazgo'],
+            descripcion: 'Soldado superhumano con un escudo indestructible.',
+            categoria: 'avengers'
+        },
+        capitanaMarvel: {
+            nombre: 'Capitana Marvel',
+            clave: 'CM-016',
+            imagenFront: 'img/placeholder.png',
+            habilidades: ['Superfuerza', 'Vuelo', 'Energía cósmica'],
+            descripcion: 'Superfuerza, vuelo y energía cósmica.',
+            categoria: 'avengers'
+        },
+        panteraNegra: {
+            nombre: 'Pantera Negra',
+            clave: 'PN-017',
+            imagenFront: 'img/placeholder.png',
+            habilidades: ['Agilidad', 'Fuerza', 'Tecnología avanzada'],
+            descripcion: 'Agilidad, fuerza y tecnología avanzada de Wakanda.',
+            categoria: 'avengers'
+        },
+        blackWidow: {
+            nombre: 'Black Widow',
+            clave: 'BW-018',
+            imagenFront: 'img/placeholder.png',
+            habilidades: ['Combate cuerpo a cuerpo', 'Espionaje', 'Agilidad'],
+            descripcion: 'Experta en combate cuerpo a cuerpo y espionaje.',
+            categoria: 'avengers'
+        },
+        brujaEscarlata: {
+            nombre: 'Bruja Escarlata',
+            clave: 'BE-019',
+            imagenFront: 'img/placeholder.png',
+            habilidades: ['Manipulación de la realidad', 'Magia', 'Poderes psíquicos'],
+            descripcion: 'Manipulación de la realidad y magia poderosa.',
+            categoria: 'avengers'
+        },
+        ciclope: {
+            nombre: 'Cíclope',
+            clave: 'CI-010',
+            imagenFront: 'img/placeholder.png',
+            habilidades: ['Rayos ópticos', 'Liderazgo', 'Tácticas de combate'],
+            descripcion: 'Líder de los X-Men con poderosos rayos ópticos.',
+            categoria: 'xmen'
+        },
+        jeanGrey: {
+            nombre: 'Jean Grey',
+            clave: 'JG-011',
+            imagenFront: 'img/placeholder.png',
+            habilidades: ['Telepatía', 'Telequinesis', 'Fuerza mental'],
+            descripcion: 'Mutante con habilidades telepáticas y telequinéticas.',
+            categoria: 'xmen'
+        },
+        tormenta: {
+            nombre: 'Tormenta',
+            clave: 'TO-012',
+            imagenFront: 'img/placeholder.png',
+            habilidades: ['Control del clima', 'Vuelo', 'Manipulación de elementos'],
+            descripcion: 'Controla el clima y los elementos atmosféricos.',
+            categoria: 'xmen'
+        },
+        bestia: {
+            nombre: 'Bestia',
+            clave: 'BE-013',
+            imagenFront: 'img/placeholder.png',
+            habilidades: ['Fuerza', 'Agilidad', 'Intelecto superior'],
+            descripcion: 'Mutante con fuerza, agilidad y gran intelecto.',
+            categoria: 'xmen'
+        },
+        profesorX: {
+            nombre: 'Profesor X',
+            clave: 'PX-014',
+            imagenFront: 'img/placeholder.png',
+            habilidades: ['Telepatía', 'Liderazgo', 'Fundador de los X-Men'],
+            descripcion: 'Telepata poderoso y fundador de los X-Men.',
+            categoria: 'xmen'
+        },
+        gambito: {
+            nombre: 'Gambito',
+            clave: 'GA-015',
+            imagenFront: 'img/placeholder.png',
+            habilidades: ['Carga cinética', 'Agilidad', 'Lanzamiento de cartas'],
+            descripcion: 'Mutante con habilidad para cargar objetos con energía cinética.',
+            categoria: 'xmen'
         }
         // ... más datos de cartas ...
     };
