@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arena de Combate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .zona-combate {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 30px;
+        }
+        .carta {
+            background: #fff;
+            color: black;
+            border-radius: 8px;
+            padding: 10px;
+            width: 120px;
+            cursor: pointer;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+        .carta:hover {
+            transform: scale(1.1);
+        }
+        .seleccionada {
+            border: 3px solid #4caf50;
+        }
+        .barra-vida {
+            background: red;
+            height: 20px;
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .acciones {
+            margin-top: 20px;
+            display: none;
+        }
+        .acciones button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arena de Combate</h1>
+    <p>Selecciona una carta para cada jugador</p>
+    <div class="zona-combate">
+        <div id="jugador1" class="carta" onclick="seleccionarCarta(1, this)">
+            <p>Spiderman</p>
+            <img src="/img/Spiderman.webp" width="90" />
+            <div class="barra-vida" id="vida1"></div>
+        </div>
+        <div id="jugador2" class="carta" onclick="seleccionarCarta(2, this)">
+            <p>Ironman</p>
+            <img src="/img/Ironman.webp" width="90" />
+            <div class="barra-vida" id="vida2"></div>
+        </div>
+    </div>
+    <div class="acciones" id="acciones">
+        <h2 id="turno"></h2>
+        <button onclick="atacar(45)">Golpe (45 daño)</button>
+        <button onclick="atacar(25)">Estruendo (25 daño)</button>
+    </div>
+    <h2 id="resultado"></h2>
+
+    <script>
+        let seleccionados = [null, null];
+        let vidas = [100, 100];
+        let turnoJugador = 0;
+
+        function seleccionarCarta(jugador, elemento) {
+            if (seleccionados[jugador - 1]) return;
+            seleccionados[jugador - 1] = elemento;
+            elemento.classList.add("seleccionada");
+            if (seleccionados[0] && seleccionados[1]) {
+                document.getElementById("acciones").style.display = "block";
+                actualizarTurno();
+            }
+        }
+
+        function actualizarTurno() {
+            document.getElementById("turno").innerText = `Turno del Jugador ${turnoJugador + 1}`;
+        }
+
+        function atacar(daño) {
+            const oponente = turnoJugador === 0 ? 1 : 0;
+            vidas[oponente] -= daño;
+            if (vidas[oponente] < 0) vidas[oponente] = 0;
+            document.getElementById("vida" + (oponente + 1)).style.width = vidas[oponente] + "%";
+
+            if (vidas[oponente] <= 0) {
+                document.getElementById("acciones").style.display = "none";
+                document.getElementById("resultado").innerText = `Jugador ${turnoJugador + 1} gana!`;
+                return;
+            }
+
+            turnoJugador = oponente;
+            actualizarTurno();
+        }
+    </script>
+</body>
+</html>

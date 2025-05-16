@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arena</title>
+    <link rel="stylesheet" href="css/arena.css" />
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul class="botones-menu">
+                <li><a href="index.html" class="boton-interactivo">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bienvenido a Arena</h1>
+        <p>Elige 3 emocionantes modos de juego 😎.</p>
+
+        <div class="modos-de-juego">
+            <a href="combate.html" class="carta-modo" id="pvp">
+                <h2>Player vs Player</h2>
+            </a>
+
+            <a href="#" class="carta-modo" id="pvpc">
+                <h2>Player vs PC</h2>
+            </a>
+            <a href="#" class="carta-modo" id="pcvpc">
+                <h2>PC vs PC</h2>
+            </a>
+        </div>
+
+        <!-- 👇 NUEVA SECCIÓN PARA SELECCIONAR CARTAS -->
+        <section id="seleccion-cartas" style="display: none;">
+            <h2>Elige tus dos cartas</h2>
+            <div class="zona-cartas">
+                <div id="jugador1" class="seleccion-jugador">
+                    <h3>Jugador 1</h3>
+                    <div id="cartas-jugador1" class="cartas-disponibles"></div>
+                </div>
+                <div id="jugador2" class="seleccion-jugador">
+                    <h3>Jugador 2</h3>
+                    <div id="cartas-jugador2" class="cartas-disponibles"></div>
+                </div>
+            </div>
+            <button id="iniciar-combate">¡Combatir!</button>
+        </section>
+        <!-- 👆 HASTA AQUÍ -->
+    </main>
+
+    <script src="js/arena.js"></script>
+</body>
+</html>

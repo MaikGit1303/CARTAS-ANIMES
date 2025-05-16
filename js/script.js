@@ -224,6 +224,14 @@ document.querySelectorAll('.carta-marvel').forEach(carta => {
         }
     }
 
+    // **Funcionalidad para navegar a arena.html al hacer clic en el botón Arena**
+    const arenaBtn = document.getElementById('arena-btn');
+    if (arenaBtn) {
+        arenaBtn.addEventListener('click', () => {
+            window.location.href = 'arena.html';
+        });
+    }
+
     // **Funcionalidad para mostrar la vista de carta seleccionada**
     if (cartasMarvelLista && vistaCartaSeleccionada && cartaAmpliada && cartaReversoVista) {
         cartasMarvelLista.addEventListener('click', (event) => {
