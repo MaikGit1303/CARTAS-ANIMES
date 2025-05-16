@@ -16,4 +16,4 @@
    ```bash
    git clone https://github.com/Andres-Camilo-Lopez-Valenzuela/Superheroes-javascript.git
 
-Trabajo realizado por Maikol Amado, JoseDavid y Andrés Camilo Lopez
+Trabajo realizado por Maikol Amado, JoseDavid y Andrés Camilo Lopez.
